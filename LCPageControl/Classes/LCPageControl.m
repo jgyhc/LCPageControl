@@ -11,7 +11,7 @@
 
 
 
-@interface MJIndexPageItemView : UIControl
+@interface LCPageItemView : UIControl
 
 @property(nonatomic, strong) UIColor * pageIndicatorTintColor;
 
@@ -20,7 +20,7 @@
 @end
 
 
-@implementation MJIndexPageItemView
+@implementation LCPageItemView
 
 - (instancetype)init
 {
@@ -81,8 +81,8 @@
         if (self.delegate && [self.delegate respondsToSelector:@selector(customPageItemWithPageControl:index:)]) {
             itemView = [self.delegate customPageItemWithPageControl:self index:i];
         }else {
-            itemView = [[MJIndexPageItemView alloc] init];
-            MJIndexPageItemView *view = (MJIndexPageItemView *)itemView;
+            itemView = [[LCPageItemView alloc] init];
+            LCPageItemView *view = (LCPageItemView *)itemView;
             if (_pageIndicatorTintColor) {
                 view.pageIndicatorTintColor = _pageIndicatorTintColor;
             }
@@ -136,7 +136,6 @@
 
 - (void)setCurrentPage:(NSInteger)currentPage {
     _currentPage = currentPage;
-    NSLog(@"%ld", currentPage);
     if (currentPage < self.itemViews.count) {
         UIControl *itemView = self.itemViews[currentPage];
         if (_lastItemView) {
@@ -151,14 +150,14 @@
 
 - (void)setCurrentPageIndicatorTintColor:(UIColor *)currentPageIndicatorTintColor {
     _currentPageIndicatorTintColor = currentPageIndicatorTintColor;
-    [self.itemViews enumerateObjectsUsingBlock:^(MJIndexPageItemView *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [self.itemViews enumerateObjectsUsingBlock:^(LCPageItemView *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         obj.currentPageIndicatorTintColor = currentPageIndicatorTintColor;
     }];
 }
 
 - (void)setPageIndicatorTintColor:(UIColor *)pageIndicatorTintColor {
     _pageIndicatorTintColor = pageIndicatorTintColor;
-    [self.itemViews enumerateObjectsUsingBlock:^(MJIndexPageItemView *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [self.itemViews enumerateObjectsUsingBlock:^(LCPageItemView *  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         obj.pageIndicatorTintColor = pageIndicatorTintColor;
     }];
 }
