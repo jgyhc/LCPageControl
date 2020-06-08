@@ -31,4 +31,4 @@ LCPageControl is available under the MIT license. See the LICENSE file for more 
 
 ## 效果
 
-![avatar](ezgif.com-gif-to-apng.gif)
+![效果.gif](https://upload-images.jianshu.io/upload_images/1350722-1de6261688636dcb.gif?imageMogr2/auto-orient/strip)
