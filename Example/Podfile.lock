@@ -1,15 +1,22 @@
 PODS:
-  - LCPageControl (0.1.0)
+  - LCPageControl (0.1.0):
+    - Masonry
+  - Masonry (1.1.0)
 
 DEPENDENCIES:
   - LCPageControl (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Masonry
 
 EXTERNAL SOURCES:
   LCPageControl:
     :path: "../"
 
 SPEC CHECKSUMS:
-  LCPageControl: 2c0b6c00eb73ef3eb5d324b52182c42eca1448d1
+  LCPageControl: 8a4088f80e1c36171d6980599160c41959fb273f
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
 
 PODFILE CHECKSUM: 4f771da99850b467d1d1ad50ad427de1ab325398
 

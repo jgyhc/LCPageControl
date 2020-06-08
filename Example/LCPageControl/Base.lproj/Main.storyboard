@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="whP-gf-Uak">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,8 +18,55 @@
                     <view key="view" contentMode="scaleToFill" id="TpU-gO-2f1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DIt-uo-Zak" customClass="LCPageControl">
+                                <rect key="frame" x="10" y="40" width="355" height="20"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="jhw-aw-xrU"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="175-Gm-No8" customClass="LCPageControl">
+                                <rect key="frame" x="10" y="110" width="355" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="0.24394806338028169" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="zPe-Yl-gZL"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iry-kC-tPA">
+                                <rect key="frame" x="10" y="318.5" width="46" height="30"/>
+                                <state key="normal" title="上一页"/>
+                                <connections>
+                                    <action selector="previousPageEvent:" destination="whP-gf-Uak" eventType="touchUpInside" id="ybw-Od-lpO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDy-UL-ibc">
+                                <rect key="frame" x="319" y="318.5" width="46" height="30"/>
+                                <state key="normal" title="下一页"/>
+                                <connections>
+                                    <action selector="nextPageEvent:" destination="whP-gf-Uak" eventType="touchUpInside" id="9xp-Zh-jyg"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="LDy-UL-ibc" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" id="9gT-oS-fNr"/>
+                            <constraint firstAttribute="trailing" secondItem="DIt-uo-Zak" secondAttribute="trailing" priority="250" constant="10" id="IfD-cQ-DPa"/>
+                            <constraint firstItem="LDy-UL-ibc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Iry-kC-tPA" secondAttribute="trailing" constant="8" symbolic="YES" id="Ixx-74-7nr"/>
+                            <constraint firstItem="175-Gm-No8" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="10" id="TnL-yc-jOn"/>
+                            <constraint firstItem="Iry-kC-tPA" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" id="VZk-cs-UWv"/>
+                            <constraint firstAttribute="trailing" secondItem="LDy-UL-ibc" secondAttribute="trailing" constant="10" id="b5Z-0T-bVT"/>
+                            <constraint firstItem="DIt-uo-Zak" firstAttribute="top" secondItem="uEw-UM-LJ8" secondAttribute="bottom" constant="40" id="dPg-1x-1p3"/>
+                            <constraint firstItem="175-Gm-No8" firstAttribute="top" secondItem="DIt-uo-Zak" secondAttribute="bottom" constant="50" id="mWN-o8-CBD"/>
+                            <constraint firstItem="DIt-uo-Zak" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="10" id="tA9-OZ-gnI"/>
+                            <constraint firstAttribute="trailing" secondItem="175-Gm-No8" secondAttribute="trailing" priority="249" constant="10" id="tfT-Hp-xJn"/>
+                            <constraint firstItem="Iry-kC-tPA" firstAttribute="leading" secondItem="TpU-gO-2f1" secondAttribute="leading" constant="10" id="vrA-GT-lQS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="customPageControl" destination="175-Gm-No8" id="Wtt-kO-bOD"/>
+                        <outlet property="pageControl" destination="DIt-uo-Zak" id="HUH-MN-7Xk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tc2-Qw-aMS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
