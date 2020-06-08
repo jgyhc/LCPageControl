@@ -27,3 +27,8 @@ jgyhc, jgyhc@foxmail.com
 ## License
 
 LCPageControl is available under the MIT license. See the LICENSE file for more info.
+
+
+## 效果
+
+![avatar](ezgif.com-gif-to-apng.gif)
