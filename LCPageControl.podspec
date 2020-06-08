@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'LCPageControl'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = '自定义的页码控制器 LCPageControl.'
 
 # This description is used to generate tags and improve search results.
