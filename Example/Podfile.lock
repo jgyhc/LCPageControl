@@ -1,0 +1,16 @@
+PODS:
+  - LCPageControl (0.1.0)
+
+DEPENDENCIES:
+  - LCPageControl (from `../`)
+
+EXTERNAL SOURCES:
+  LCPageControl:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  LCPageControl: 2c0b6c00eb73ef3eb5d324b52182c42eca1448d1
+
+PODFILE CHECKSUM: 4f771da99850b467d1d1ad50ad427de1ab325398
+
+COCOAPODS: 1.9.1
